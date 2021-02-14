@@ -7,12 +7,11 @@ import java.util.Random;
 
 class PowerPillTest {
     private static Random rand;
-    private static String[] color;
+    private static String[] color = {"Blue", "Red", "Pink", "Purple", "Green"};
 
     @BeforeAll
     static void beforeAll() {
         rand = new Random();
-        String[] color= {"Blue", "Red", "Pink", "Purple", "Green"};
     }
 
     @Test
