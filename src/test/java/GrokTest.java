@@ -49,8 +49,9 @@ class GrokTest {
 
     @Test
     void tookHit() {
-        int power = rand.nextInt(800);
-        int expected = (power % 5) - 5;
+        int power = rand.nextInt(800)+10;
+        int expected = (power % 5);
+        expected = expected != 0? expected - 5:0;
         Grok aGrok = new Grok(power);
         while (aGrok.getPowerLevel() > 0){
             aGrok.tookHit();
